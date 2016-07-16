@@ -1,0 +1,90 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@2.1.17
+3 info using node@v0.10.35
+4 verbose node symlink /usr/local/bin/node
+5 verbose publish [ '.' ]
+6 silly cache add args [ '.', null ]
+7 verbose cache add spec .
+8 silly cache add parsed spec { raw: '.',
+8 silly cache add   scope: null,
+8 silly cache add   name: null,
+8 silly cache add   rawSpec: '.',
+8 silly cache add   spec: '/Users/vinay/workspace/testnode',
+8 silly cache add   type: 'directory' }
+9 verbose addLocalDirectory /Users/vinay/.npm/testnode/1.0.0/package.tgz not in flight; packing
+10 verbose tar pack [ '/Users/vinay/.npm/testnode/1.0.0/package.tgz',
+10 verbose tar pack   '/Users/vinay/workspace/testnode' ]
+11 verbose tarball /Users/vinay/.npm/testnode/1.0.0/package.tgz
+12 verbose folder /Users/vinay/workspace/testnode
+13 info prepublish testnode@1.0.0
+14 verbose addLocalTarball adding from inside cache /Users/vinay/.npm/testnode/1.0.0/package.tgz
+15 silly cache afterAdd testnode@1.0.0
+16 verbose afterAdd /Users/vinay/.npm/testnode/1.0.0/package/package.json not in flight; writing
+17 verbose afterAdd /Users/vinay/.npm/testnode/1.0.0/package/package.json written
+18 silly publish { name: 'testnode',
+18 silly publish   version: '1.0.0',
+18 silly publish   description: 'Test node module',
+18 silly publish   main: 'index.js',
+18 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+18 silly publish   repository: { type: 'git', url: 'https://github.com/v1nayv/testnode.git' },
+18 silly publish   keywords: [ 'add', 'numbers' ],
+18 silly publish   author: { name: 'Vinay Vasudevamurthy', email: 'vinay.vas@gmail.com' },
+18 silly publish   license: 'MIT',
+18 silly publish   bugs: { url: 'https://github.com/v1nayv/testnode/issues' },
+18 silly publish   homepage: 'https://github.com/v1nayv/testnode',
+18 silly publish   gitHead: '9ef2d375d53f7f819bee25c582bbafc8e3e49f00',
+18 silly publish   readme: 'ERROR: No README data found!',
+18 silly publish   _id: 'testnode@1.0.0',
+18 silly publish   _shasum: '0564c4226c34760e172e0f55536d3e9ba50ceaf8',
+18 silly publish   _from: '.' }
+19 silly mapToRegistry name testnode
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/testnode
+23 verbose publish registryBase https://registry.npmjs.org/
+24 silly publish uploading /Users/vinay/.npm/testnode/1.0.0/package.tgz
+25 verbose request uri https://registry.npmjs.org/testnode
+26 verbose request sending authorization for write operation
+27 info attempt registry request try #1 at 19:55:16
+28 verbose request using bearer token for auth
+29 verbose request id c0506d057289edf8
+30 http request PUT https://registry.npmjs.org/testnode
+31 http 403 https://registry.npmjs.org/testnode
+32 verbose headers { 'content-type': 'application/json',
+32 verbose headers   'cache-control': 'max-age=300',
+32 verbose headers   'content-length': '102',
+32 verbose headers   'accept-ranges': 'bytes',
+32 verbose headers   date: 'Sat, 16 Jul 2016 00:55:17 GMT',
+32 verbose headers   via: '1.1 varnish',
+32 verbose headers   connection: 'keep-alive',
+32 verbose headers   'x-served-by': 'cache-dfw1844-DFW',
+32 verbose headers   'x-cache': 'MISS',
+32 verbose headers   'x-cache-hits': '0',
+32 verbose headers   'x-timer': 'S1468630516.976588,VS0,VE454',
+32 verbose headers   vary: 'Accept-Encoding' }
+33 verbose request invalidating /Users/vinay/.npm/registry.npmjs.org/testnode on PUT
+34 error publish Failed PUT 403
+35 verbose stack Error: you do not have permission to publish "testnode". Are you logged in as the correct user? : testnode
+35 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:244:14)
+35 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+35 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:373:22)
+35 verbose stack     at Request.emit (events.js:98:17)
+35 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1318:14)
+35 verbose stack     at Request.emit (events.js:117:20)
+35 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1266:12)
+35 verbose stack     at IncomingMessage.emit (events.js:117:20)
+35 verbose stack     at _stream_readable.js:944:16
+35 verbose stack     at process._tickCallback (node.js:442:13)
+36 verbose statusCode 403
+37 verbose pkgid testnode
+38 verbose cwd /Users/vinay/workspace/testnode
+39 error Darwin 15.3.0
+40 error argv "node" "/usr/local/bin/npm" "publish"
+41 error node v0.10.35
+42 error npm  v2.1.17
+43 error code E403
+44 error you do not have permission to publish "testnode". Are you logged in as the correct user? : testnode
+45 error If you need help, you may report this error at:
+45 error     <http://github.com/npm/npm/issues>
+46 verbose exit [ 1, true ]
